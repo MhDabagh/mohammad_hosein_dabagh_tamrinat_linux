@@ -1,0 +1,17 @@
+s1:
+mkdir -p project/asseta/css project/asseta/py project/pages
+
+s2:
+touch info.txt
+ln info.txt info_s.txt
+ln -s info.txt info_h.txt
+rm info.txt
+cat info_s.txt
+چون یک هاردلینک است بدون خطا فایلی که پاک کردیم را نمایش میدهد
+cat info_s.txt
+چون سیمبلیک است و مثل یک شورت کات از فایل اصلی است , ارور فایلی موجود نیست را نمایش میده
+
+s3:
+rm -i
+man rm
+rm -f

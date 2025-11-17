@@ -1,0 +1,11 @@
+s1:
+man grep
+grep -c "word" file.txt
+grep -c "root" /etc/passwd
+
+s2:
+cd /etc
+find . -type f -name "*.conf"
+
+s3:
+head -n 1099 data.csv | tail -n 100

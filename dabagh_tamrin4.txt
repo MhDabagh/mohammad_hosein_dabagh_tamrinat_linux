@@ -1,0 +1,19 @@
+s1:
+echo "---rwxr-x" 
+
+معادل عددی : 075
+محاسبه: owner=0 (---), group=7 (rwx), other=5 (r-x)
+
+s2:
+chmod g-x deploy.sh
+ls -l deploy.sh
+
+s3:
+umask 0027
+touch mfile
+mkdir mdir
+ls -l mfile
+ls -ld mdir
+
+فایل → 640 (rw-r-----)
+دایرکتوری → 750 (rwxr-x---)
