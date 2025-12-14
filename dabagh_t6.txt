@@ -1,0 +1,38 @@
+s1:
+ برای اجرای اسکریپت موجود در دایرکتوری فعلی باید از ./script_name.sh استفاده کنیم،
+ زیرا دایرکتوری فعلی به صورت پیش‌فرض در متغیر PATH قرار ندارد و
+ سیستم فقط در مسیرهای موجود در PATH به دنبال فایل اجرایی می‌گردد.
+
+s2:
+ اسکریپت محاسبه محیط و مساحت مستطیل
+touch rectangle
+vim rectangle
+
+#!/bin/bash
+
+read -p "width: " width
+read -p "length: " length
+
+perimeter=$((2*(length+width)))
+echo "perimeter: $perimeter"
+
+area=$((length*width))
+echo "area: $area"
+
+chmod +x rectangle
+./rectangle
+
+s3:
+
+vim rectangle
+
+#!/bin/bash
+
+echo "$@"
+echo "$*"
+
+for arg in "$@"; do
+  echo "$arg"
+done
+
+./rectangle a b

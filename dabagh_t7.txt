@@ -1,0 +1,28 @@
+s1:
+#!/bin/bash
+if [ "$#" -ne 1 ]; then
+echo "error: exactly one argument required"
+exit 1
+fi
+
+if [ -e "$1" ]; then
+echo "file exists"
+else
+echo "file does not exist"
+fi
+
+s2:
+اگر متغیر داخل شرط دابل کوتیشن نداشته باشد و مقدار آن خالی یا شامل فاصله باشد،
+شرط به چند آرگومان شکسته می‌شود و خطا یا نتیجه نادرست می‌دهد.
+دابل کوتیشن باعث می‌شود مقدار متغیر به‌صورت یک رشته واحد بررسی شود.
+
+s3:
+#!/bin/bash
+for file in *
+do
+if [ -f "$file" ]; then
+echo "$file : file"
+elif [ -d "$file" ]; then
+echo "$file : directory"
+fi
+done
